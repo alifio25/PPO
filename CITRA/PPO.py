@@ -1,6 +1,6 @@
 import cv2
 
-CITRA = cv2.imread ("C:/Users/User/OneDrive/Desktop/CODE PPO_Alifio Eren/Pigai.webp")
+CITRA = cv2.imread ("C:/Users/User/OneDrive/Desktop/CODE PPO_Alifio Eren/image.png")
 
 print (CITRA[:,:,0])
 print (CITRA[:,:,1])
@@ -13,6 +13,3 @@ cv2.imshow ("red", CITRA[:,:,0])
 cv2.imshow ("asli", CITRA)
 cv2.waitKey()
 
-
-
-# python -m pip install opencv-python
