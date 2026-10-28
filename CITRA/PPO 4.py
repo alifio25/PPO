@@ -4,6 +4,7 @@ import numpy as np
 
 # Baca gambardan ubah ke grayscale
 img = cv2.imread('C:/Users/User/OneDrive/Desktop/CODE PPO_Alifio Eren/image.png', cv2.IMREAD_GRAYSCALE)
+resize = cv2.resize(img, (200, 200), interpolation=cv2.INTER_NEAREST)
 
 # Tentukan nilai ambang (threshold)
 treshold = 90 #bisa di ubah antara 0-255
@@ -16,6 +17,7 @@ binary_manual[img >= treshold] = 255
 binary_manual[img <= treshold] = 0
 
 # Tampilkan hasil
+cv2.imshow('Resize Manual', resize)
 cv2.imshow('Grayscale', img)
 cv2.imshow('Biner Manual', binary_manual)
 cv2.waitKey(0)
