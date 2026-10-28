@@ -5,7 +5,10 @@ import math
 
 # Baca gambardan ubah ke grayscale
 img = cv2.imread('C:/Users/User/OneDrive/Desktop/CODE PPO_Alifio Eren/image.png', cv2.IMREAD_GRAYSCALE)
+#----------------------------------------------------------------------------------------------#
+# Resize
 resize = cv2.resize(img, (200, 200), interpolation=cv2.INTER_NEAREST)
+#----------------------------------------------------------------------------------------------#
 
 # Tentukan nilai ambang (threshold)
 treshold = 90 #bisa di ubah antara 0-255
@@ -17,6 +20,8 @@ binary_manual = np.zeros_like(img)
 binary_manual[img >= treshold] = 255
 binary_manual[img <= treshold] = 0
 
+#----------------------------------------------------------------------------------------------#
+# ROTASI
 img = cv2.resize(img, (200, 200))
 h, w = img.shape[:2]
 
@@ -38,6 +43,7 @@ for y_new in range (h):
         # Cek apakah masih dalam batas gambar asli 
         if 0 <= int (X_old) < w and 0 <= int (y_old) < h:
             rotated[y_new, x_new] = img[int(y_old), int(X_old)]
+#----------------------------------------------------------------------------------------------#
 
 # Tampilkan hasil
 cv2.imshow('Resize Manual', resize)
