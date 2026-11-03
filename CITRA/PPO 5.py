@@ -6,7 +6,6 @@ import math
 
 # Baca gambar
 img = cv2.imread('C:/Users/User/OneDrive/Desktop/CODE PPO_Alifio Eren/image.png')
-img = cv2.resize(img, (200, 200))
 h, w = img.shape[:2]
 
 # Sudut rotasi (misal 45 derajat)
