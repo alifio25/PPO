@@ -68,7 +68,7 @@ if countours is not None and hierarchy is not None:
             area_pixels -= area
 
     cv2.drawContours(frame, countours, -1, (0, 255, 0), 2)
-    
+
     if pixel_per_cm is not None:
         area_cm2 = area_pixels / (pixel_per_cm ** 2)
 
@@ -76,12 +76,19 @@ if countours is not None and hierarchy is not None:
 # DISPLAY AREA #
 #==============================#
 if pixel_per_cm is not None and area_cm2 is not None:
+
+    display_area = locked_area if locked_area is not None else area_cm2
+
     cv2.putText(
         frame,
-        f"Area: {area_cm2:.2f} cm^2",
-        (10, 30),
+        f"Area: {display_area:.2f} cm2",
+        (10, 40),
         cv2.FONT_HERSHEY_SIMPLEX,
         1,
         (0, 255, 0),
         2
     )
+
+cv2.putText(
+    frame,
+    "C=Kalibrasi | S=Kunci | R=Reset | Q=Keluar",
