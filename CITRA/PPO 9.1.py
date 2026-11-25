@@ -8,10 +8,10 @@ import csv
 # =====================================================
 
 # Lokasi gambar referensi kalibrasi
-PATH_REFERENSI = r"C:/Users/ASUS/OneDrive/Documents/Dokumen/CITRA DAUN/Green Leaf with 10 cm Ruler.png"
+PATH_REFERENSI = r"C:/Users/User/OneDrive\Desktop/CODE PPO_Alifio Eren/img_Daun\daun & penggaris.png"
 
 # Folder utama dataset
-FOLDER_DATASET = r"C:/Users/ASUS/OneDrive/Documents/Dokumen/CITRA DAUN"
+FOLDER_DATASET = r"C:/Users/User/OneDrive\Desktop/CODE PPO_Alifio Eren/img_Daun"
 
 # Folder kategori dataset
 FOLDER_KATEGORI = {
